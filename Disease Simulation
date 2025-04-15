@@ -7,3 +7,7 @@ System.out.println("Chicken Jockey")
 System.out.println("Im Steve")
 System.out.println("Im Alex")
 System.out.println("They love loaf")
+
+susceptableIndividual
+infectedIndividual
+recoveredIndividual
