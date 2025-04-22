@@ -1,15 +1,9 @@
-public class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
-}
-System.out.println("Chicken Jockey")
-System.out.println("Im Steve")
-System.out.println("Im Alex")
-System.out.println("They love loaf")
+Import.java.util.Random; // This is for the random number generator
+public class DiseaseSimulation {
+public static void main(String[] args) {
 
-susceptableIndividual
-infectedIndividual
-recoveredIndividual
-helllllooooooooo
-LeBron James
+int N = 7; // This is for the size of the grid 7x7
+String [][] grid = new String[N][N];
+
+Random random = new Random (); // random number generator
+double infectionRate = 0.6; // the chance that the people will get infected
