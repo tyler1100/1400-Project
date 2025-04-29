@@ -9,11 +9,13 @@ Import java.util.Random; // This is for the random number generator
 		double infectionRate = 0.3; // infection rate from the patient zero
 		double recoveryRate= 0.1; // recovery rate after being infected
 
-		for (int i = 0; i < size; i++) {
+		for (int i = 0; i < size; i++) { // Starts out with everyone being susceptible with one patient zero
 			for (int j = 0; j < size; j++) {
-				grid[i][j] = “S” 
+				grid[i][j] = “S”
+
 		}
 		}
-		int infectedRow = random.nextInt(size);
+
+		int infectedRow = random.nextInt(size); // Makes one person start out as patient zero
 		int infectedColumn = random.nextInt(size);
-		
+		grid[infectedRow][infectedColumn] = "I"
