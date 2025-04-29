@@ -11,7 +11,7 @@ Import java.util.Random; // This is for the random number generator
 
 		for (int i = 0; i < N; i++) { // Starts out with everyone being susceptible with one patient zero
 			for (int j = 0; j < N; j++) {
-				grid[i][j] = “S”
+				grid[i][j] = “S”;
 
 		int infectedRow = random.nextInt(N); // Makes one person start out as patient zero
 		int infectedColumn = random.nextInt(N);
@@ -33,7 +33,7 @@ Import java.util.Random; // This is for the random number generator
 			nextGrid[i][j] = grid[i][j]; // when there is no change
 
 	if (grid[i][j].equals("I")) {
-		if (random.nextDouble() < recoveryChance) {
+		if (random.nextDouble() < recoveryRate) {
 			nextGrid[i][j] = "R"; 
 	}
 	else {
