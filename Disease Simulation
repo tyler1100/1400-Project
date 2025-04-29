@@ -13,9 +13,10 @@ Import java.util.Random; // This is for the random number generator
 			for (int j = 0; j < size; j++) {
 				grid[i][j] = “S”
 
-		}
-		}
-
 		int infectedRow = random.nextInt(size); // Makes one person start out as patient zero
 		int infectedColumn = random.nextInt(size);
 		grid[infectedRow][infectedColumn] = "I"
+
+				}
+			}
+		}
