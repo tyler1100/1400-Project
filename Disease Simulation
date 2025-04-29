@@ -40,3 +40,18 @@ Import java.util.Random; // This is for the random number generator
 	int[] r = {-1, 1, 0, 0}; // the r is for row
 	int[] c = {0, 0, -1, 1}; // the c is for column
 
+	for (int k = 0; k < 4; i++) {
+		int nr = nr + r[k]; // nr = neighborRow
+		int nc = nc + c[k]; nc = neighborColumn
+
+	if (nr >= 0 && nr < size && nc >= 0 && nc < size && grid[nr][nc].equals("S")) {
+		if (random.nextDouble() < infectionChance) {
+			nextGrid[nr][nc] = "S";
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
