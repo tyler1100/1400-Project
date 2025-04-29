@@ -20,3 +20,6 @@ Import java.util.Random; // This is for the random number generator
 				}
 			}
 		}
+
+		System.out.println("Run Simulation");
+		printGrid(grid);
