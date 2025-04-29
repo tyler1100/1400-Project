@@ -31,3 +31,9 @@ Import java.util.Random; // This is for the random number generator
 	for (int i = 0; i < size; i++) {
 		for (int j = 0; j < size; j++) {
 			nextGrid[i][j] = grid[i][j]; // when there is no change
+
+	if (grid[i][j].equals("I")) {
+		if (random.nextDouble() < recoveryChance) {
+			nextGrid[i][j] = "R"; 
+
+
