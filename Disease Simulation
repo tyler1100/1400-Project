@@ -35,5 +35,8 @@ Import java.util.Random; // This is for the random number generator
 	if (grid[i][j].equals("I")) {
 		if (random.nextDouble() < recoveryChance) {
 			nextGrid[i][j] = "R"; 
-
+	}
+	else {
+	int[] r = {-1, 1, 0, 0}; // the r is for row
+	int[] c = {0, 0, -1, 1}; // the c is for column
 
