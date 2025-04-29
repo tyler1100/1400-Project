@@ -9,12 +9,12 @@ Import java.util.Random; // This is for the random number generator
 		double infectionRate = 0.3; // infection rate from the patient zero
 		double recoveryRate= 0.1; // recovery rate after being infected
 
-		for (int i = 0; i < size; i++) { // Starts out with everyone being susceptible with one patient zero
-			for (int j = 0; j < size; j++) {
+		for (int i = 0; i < N; i++) { // Starts out with everyone being susceptible with one patient zero
+			for (int j = 0; j < N; j++) {
 				grid[i][j] = “S”
 
-		int infectedRow = random.nextInt(size); // Makes one person start out as patient zero
-		int infectedColumn = random.nextInt(size);
+		int infectedRow = random.nextInt(N); // Makes one person start out as patient zero
+		int infectedColumn = random.nextInt(N);
 		grid[infectedRow][infectedColumn] = "I"
 
 				}
@@ -26,10 +26,10 @@ Import java.util.Random; // This is for the random number generator
 	System.out.println("Infected: " + countInfected(grid) + ", Susceptible: " + countSusceptible(grid) + ", Recovered: " + countRecovered(grid));
 
 	for (int time = 1; time < 20; time++) {
-		String[][] nextGrid = new String[size][size];
+		String[][] nextGrid = new String[N][N];
 
-	for (int i = 0; i < size; i++) {
-		for (int j = 0; j < size; j++) {
+	for (int i = 0; i < N; i++) {
+		for (int j = 0; j < N; j++) {
 			nextGrid[i][j] = grid[i][j]; // when there is no change
 
 	if (grid[i][j].equals("I")) {
@@ -44,7 +44,7 @@ Import java.util.Random; // This is for the random number generator
 		int nr = nr + r[k]; // nr = neighborRow
 		int nc = nc + c[k]; nc = neighborColumn
 
-	if (nr >= 0 && nr < size && nc >= 0 && nc < size && grid[nr][nc].equals("S")) {
+	if (nr >= 0 && nr < N && nc >= 0 && nc < N && grid[nr][nc].equals("S")) {
 		if (random.nextDouble() < infectionChance) {
 			nextGrid[nr][nc] = "S";
 							}
