@@ -1,14 +1,14 @@
 Import java.util.Random; // This is for the random number generator
-public class DiseaseSimulation {
-public static void main(String[] args) {
+	public class DiseaseSimulation {
+	public static void main(String[] args) {
         
-int N = 7; // Size of the grid 7x7
-String [][] grid = new String[N][N];
+		int N = 7; // Size of the grid 7x7
+		String [][] grid = new String[N][N];
 
-Random random = new Random ();
-double infectionRate = 0.3;
-double recoveryRate= 0.1;
+		Random random = new Random ();
+		double infectionRate = 0.3;
+		double recoveryRate= 0.1;
 
-for (int i = 0; i < size; i++) {
-	for (int j = 0; j < size; j++) {
-		grid[i][j] = “H”
+		for (int i = 0; i < size; i++) {
+			for (int j = 0; j < size; j++) {
+				grid[i][j] = “S” 
