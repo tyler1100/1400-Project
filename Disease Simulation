@@ -12,3 +12,8 @@ Import java.util.Random; // This is for the random number generator
 		for (int i = 0; i < size; i++) {
 			for (int j = 0; j < size; j++) {
 				grid[i][j] = “S” 
+		}
+		}
+		int infectedRow = random.nextInt(size);
+		int infectedColumn = random.nextInt(size);
+		
