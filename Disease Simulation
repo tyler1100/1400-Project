@@ -15,7 +15,7 @@ Import java.util.Random; // This is for the random number generator
 
 		int infectedRow = random.nextInt(N); // Makes one person start out as patient zero
 		int infectedColumn = random.nextInt(N);
-		grid[infectedRow][infectedColumn] = "I"
+		grid[infectedRow][infectedColumn] = "I";
 
 				}
 			}
@@ -40,7 +40,7 @@ Import java.util.Random; // This is for the random number generator
 	int[] r = {-1, 1, 0, 0}; // the r is for row
 	int[] c = {0, 0, -1, 1}; // the c is for column
 
-	for (int k = 0; k < 4; i++) {
+	for (int k = 0; k < 4; k++) {
 		int nr = nr + r[k]; // nr = neighborRow
 		int nc = nc + c[k]; nc = neighborColumn
 
