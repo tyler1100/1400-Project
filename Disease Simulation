@@ -21,8 +21,9 @@ Import java.util.Random; // This is for the random number generator
 			}
 		}
 
-	System.out.println("Run Simulation");
+	System.out.println("Run Simulation"); // Writes that on the screen
 	printGrid(grid);
 	System.out.println("Infected: " + countInfected(grid) + ", Susceptible: " + countSusceptible(grid) + ", Recovered: " + countRecovered(grid));
 
-		
+	for (int time = 1; time < 20; time++) {
+		String[][] nextGrid = new String[size][size];
