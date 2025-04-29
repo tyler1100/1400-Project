@@ -5,9 +5,9 @@ Import java.util.Random; // This is for the random number generator
 		int N = 7; // Size of the grid 7x7
 		String [][] grid = new String[N][N];
 
-		Random random = new Random ();
-		double infectionRate = 0.3;
-		double recoveryRate= 0.1;
+		Random random = new Random (); // creates the new number
+		double infectionRate = 0.3; // infection rate from the patient zero
+		double recoveryRate= 0.1; // recovery rate after being infected
 
 		for (int i = 0; i < size; i++) {
 			for (int j = 0; j < size; j++) {
