@@ -1,0 +1,113 @@
+mport java.util.Random; // This is for the random number generator
+	public class DiseaseSimulation {
+		public static void main(String[] args) {
+        
+		int N = 7; // Size of the grid 7x7
+		String [][] grid = new String[N][N];
+
+		Random random = new Random (); // creates the new number
+		double infectionRate = 0.3; // infection rate from the patient zero
+		double recoveryRate= 0.1; // recovery rate after being infected
+
+		for (int i = 0; i < N; i++) { // Starts out with everyone being susceptible with one patient zero
+			for (int j = 0; j < N; j++) {
+				grid[i][j] = “S”;
+
+		int infectedRow = random.nextInt(N); // Makes one person start out as patient zero
+		int infectedColumn = random.nextInt(N);
+		grid[infectedRow][infectedColumn] = "I";
+
+				}
+			}
+		}
+
+	System.out.println("Run Simulation"); // Writes that on the screen
+	printGrid(grid);
+	System.out.println("Infected: " + countInfected(grid) + ", Susceptible: " + countSusceptible(grid) + ", Recovered: " + countRecovered(grid));
+
+	for (int testRun = 1; testRun < 20; testRun++) {
+		String[][] nextGrid = new String[N][N];
+
+	for (int i = 0; i < N; i++) {
+		for (int j = 0; j < N; j++) {
+			nextGrid[i][j] = grid[i][j]; // when there is no change
+
+	if (grid[i][j].equals("I")) {
+		if (random.nextDouble() < recoveryRate) {
+			nextGrid[i][j] = "R"; 
+	}
+	else {
+
+	int[] r = {-1, 1, 0, 0}; // the r is for row
+	int[] c = {0, 0, -1, 1}; // the c is for column
+
+	for (int k = 0; k < 4; k++) {
+		int nr = i + r[k]; // nr = neighborRow
+		int nc = j + c[k]; // nc = neighborColumn
+
+	if (nr >= 0 && nr < N && nc >= 0 && nc < N && grid[nr][nc].equals("S")) {
+		if (random.nextDouble() < infectionRate) {
+			nextGrid[nr][nc] = "I";
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	Grid = nextGrid;
+
+	System.out.println("Test Run" + testRun); // To see which numbered test run it is
+	printGrid(grid); // shows the grid onto the screen
+	System.out.println("Infected: " + countInfected(grid) + ", Susceptible: " + countSusceptible(grid) + ", Recovered; "countRecovered(grid)); // This prints out the results below the grid
+		}
+	}
+
+	stativ void printGrid(String[][] grid) {
+		for (int i = 0; i < grid.length; i++) {
+			for (int j = 0; j < grid.lentgh; j++) {
+				System.out.printgrid([i][j] + " ");
+	}
+
+		System.out.println();
+		}
+	}
+	
+	static int countInfected(String[][] grid) {
+		int count = 0;
+		for (int = 0; i < grid.length; i++) {
+			for (int j = 0; j < grid[0].length; j++) {
+				if (grid[i][j].equals("I")) {
+					count ++
+				}
+			}
+		}
+
+		return count;
+	}
+
+	static int countSusceptible(String[][] grid) {
+		int count = 0;
+		for (int = 0; i < grid.length; i++) {
+			for (int j = 0; j < grid[0].length; j++) {
+				if (grid[i][j].equals("I")) {
+					count ++
+				}
+			}
+		}
+
+		return count;
+	}
+
+	static int countRecovered(String[][] grid) {
+		int count = 0;
+		for (int = 0; i < grid.length; i++) {
+			for (int j = 0; j < grid[0].length; j++) {
+				if (grid[i][j].equals("I")) {
+					count ++
+				}
+			}
+		}
+		return count:
+	}
+}
