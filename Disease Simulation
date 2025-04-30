@@ -73,4 +73,17 @@ Import java.util.Random; // This is for the random number generator
 		}
 	}
 	
+	static int countInfected(String[][] grid) {
+		int count = 0;
+		for (int = 0; i < grid.length; i++) {
+			for (int j = 0; j < grid[0].length; j++) {
+				if (grid[i][j].equals("I")) {
+					count ++
+				}
+			}
+		}
+
+		return count;
+	}
+
 	
