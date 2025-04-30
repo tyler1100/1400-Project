@@ -3,6 +3,7 @@ import java.util.Random; // This is for the random number generator
 		public static void main(String[] args) {
         
 		int N = 7; // Size of the grid 7x7
+        // this is anthony
 		String [][] grid = new String[N][N];
 
 		Random random = new Random (); // creates the new number
