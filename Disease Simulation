@@ -25,7 +25,7 @@ Import java.util.Random; // This is for the random number generator
 	printGrid(grid);
 	System.out.println("Infected: " + countInfected(grid) + ", Susceptible: " + countSusceptible(grid) + ", Recovered: " + countRecovered(grid));
 
-	for (int time = 1; time < 20; time++) {
+	for (int testRun = 1; testRun < 20; testRun++) {
 		String[][] nextGrid = new String[N][N];
 
 	for (int i = 0; i < N; i++) {
@@ -56,3 +56,6 @@ Import java.util.Random; // This is for the random number generator
 		}
 	}
 	Grid = nextGrid;
+
+	System.out.println("Test Run" + testRun); // To see which numbered test run it is
+	printGrid(grid); // shows the grid onto the screen
