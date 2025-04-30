@@ -63,4 +63,8 @@ Import java.util.Random; // This is for the random number generator
 		}
 	}
 
+	stativ void printGrid(String[][] grid) {
+		for (int i = 0; i < grid.length; i++) {
+			for (int j = 0; j < grid.lentgh; j++) {
+				System.out.printgrid([i][j] + " ");
 	
