@@ -1,6 +1,6 @@
 Import java.util.Random; // This is for the random number generator
 	public class DiseaseSimulation {
-	public static void main(String[] args) {
+		public static void main(String[] args) {
         
 		int N = 7; // Size of the grid 7x7
 		String [][] grid = new String[N][N];
@@ -59,3 +59,8 @@ Import java.util.Random; // This is for the random number generator
 
 	System.out.println("Test Run" + testRun); // To see which numbered test run it is
 	printGrid(grid); // shows the grid onto the screen
+	System.out.println("Infected: " + countInfected(grid) + ", Susceptible: " + countSusceptible(grid) + ", Recovered; "countRecovered(grid)); // This prints out the results below the grid
+		}
+	}
+
+	
