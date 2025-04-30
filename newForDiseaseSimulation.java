@@ -1,5 +1,5 @@
-mport java.util.Random; // This is for the random number generator
-	public class DiseaseSimulation {
+import java.util.Random; // This is for the random number generator
+	public class newForDiseaseSimulation {
 		public static void main(String[] args) {
         
 		int N = 7; // Size of the grid 7x7
