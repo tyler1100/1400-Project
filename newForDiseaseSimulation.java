@@ -24,7 +24,7 @@ public class newForDiseaseSimulation {
         printGrid(grid);
         System.out.println("Infected: " + countInfected(grid) + ", Susceptible: " + countSusceptible(grid) + ", Recovered: " + countRecovered(grid));
 
-        for (int testRun = 1; testRun < 10; testRun++) {
+        for (int testRun = 1; testRun < 25; testRun++) {
             String[][] nextGrid = new String[N][N];
 
             for (int i = 0; i < N; i++) {
