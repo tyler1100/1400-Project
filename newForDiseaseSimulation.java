@@ -7,8 +7,8 @@ public class newForDiseaseSimulation {
         String[][] grid = new String[N][N];
 
         Random random = new Random(); // creates the new number
-        double infectionRate = 0.3; // infection rate from the patient zero
-        double recoveryRate = 0.1; // recovery rate after being infected
+        double infectionRate = 0.7; // infection rate from the patient zero
+        double recoveryRate = 0.3; // recovery rate after being infected
 
         for (int i = 0; i < N; i++) { // Starts out with everyone being susceptible with one patient zero
             for (int j = 0; j < N; j++) {
