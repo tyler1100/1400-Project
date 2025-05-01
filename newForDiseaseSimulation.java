@@ -1,6 +1,6 @@
 import java.util.Random; // This is for the random number generator
 
-public class newForDiseaseSimulation {
+public class newForDiseaseSimulation { // Setting up the variables
     public static void main(String[] args) {
         
         int N = 9; // Size of the grid 7x7
@@ -12,26 +12,26 @@ public class newForDiseaseSimulation {
 
         for (int i = 0; i < N; i++) { // Starts out with everyone being susceptible with one patient zero
             for (int j = 0; j < N; j++) {
-                grid[i][j] = "S";
+                grid[i][j] = "S"; // Puts everyone to susceptible except for one
             }
         }
 
         int infectedRow = random.nextInt(N); // Makes one person start out as patient zero
         int infectedColumn = random.nextInt(N);
-        grid[infectedRow][infectedColumn] = "I";
+        grid[infectedRow][infectedColumn] = "I"; // Gives that one person I for infected
 
         System.out.println("Run Simulation"); // Writes that on the screen
-        printGrid(grid);
+        printGrid(grid); // prints the grid
         System.out.println("Infected: " + countInfected(grid) + ", Susceptible: " + countSusceptible(grid) + ", Recovered: " + countRecovered(grid));
 
-        for (int testRun = 1; testRun < 25; testRun++) {
-            String[][] nextGrid = new String[N][N];
+        for (int testRun = 1; testRun < 25; testRun++) { // The amount of times the code will run giving the infected time to spread the disease
+            String[][] nextGrid = new String[N][N]; // array for next grid
 
-            for (int i = 0; i < N; i++) {
+            for (int i = 0; i < N; i++) { // copies from one array to the next one for when the grid needs to change
                 for (int j = 0; j < N; j++) {
                     nextGrid[i][j] = grid[i][j]; // when there is no change
 
-                    if (grid[i][j].equals("I")) {
+                    if (grid[i][j].equals("I")) { // 
                         if (random.nextDouble() < recoveryRate) {
                             nextGrid[i][j] = "R"; 
                         }
