@@ -31,7 +31,7 @@ public class newForDiseaseSimulation { // Setting up the variables
                 for (int j = 0; j < N; j++) {
                     nextGrid[i][j] = grid[i][j]; // when there is no change
 
-                    if (grid[i][j].equals("I")) { // 
+                    if (grid[i][j].equals("I")) { // gives a chance for the infected to become recovered
                         if (random.nextDouble() < recoveryRate) {
                             nextGrid[i][j] = "R"; 
                         }
@@ -44,7 +44,7 @@ public class newForDiseaseSimulation { // Setting up the variables
                                 int nr = i + r[k]; // nr = neighborRow
                                 int nc = j + c[k]; // nc = neighborColumn
 
-                                if (nr >= 0 && nr < N && nc >= 0 && nc < N && grid[nr][nc].equals("S")) {
+                                if (nr >= 0 && nr < N && nc >= 0 && nc < N && grid[nr][nc].equals("S")) { // gives a chance for a susceptible individual to become infected
                                     if (random.nextDouble() < infectionRate) {
                                         nextGrid[nr][nc] = "I";
                                     }
@@ -62,7 +62,7 @@ public class newForDiseaseSimulation { // Setting up the variables
         }
     }
 
-    static void printGrid(String[][] grid) {
+    static void printGrid(String[][] grid) { // Prints out the grid by also giving a space between each individual
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[i].length; j++) {
                 System.out.print(grid[i][j] + " ");
@@ -71,7 +71,7 @@ public class newForDiseaseSimulation { // Setting up the variables
         }
     }
     
-    static int countInfected(String[][] grid) {
+    static int countInfected(String[][] grid) { // Counts up all of the infected people and returns that count
         int count = 0;
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[i].length; j++) {
@@ -83,7 +83,7 @@ public class newForDiseaseSimulation { // Setting up the variables
         return count;
     }
 
-    static int countSusceptible(String[][] grid) {
+    static int countSusceptible(String[][] grid) { // Counts up all of the susceptible people and returns that count
         int count = 0;
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[i].length; j++) {
@@ -95,7 +95,7 @@ public class newForDiseaseSimulation { // Setting up the variables
         return count;
     }
 
-    static int countRecovered(String[][] grid) {
+    static int countRecovered(String[][] grid) { // Counts up all of the recovered people and returns that count
         int count = 0;
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[i].length; j++) {
