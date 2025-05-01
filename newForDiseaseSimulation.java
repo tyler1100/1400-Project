@@ -3,12 +3,12 @@ import java.util.Random; // This is for the random number generator
 public class newForDiseaseSimulation { // Setting up the variables
     public static void main(String[] args) {
         
-        int N = 9; // Size of the grid 7x7
+        int N = 9; // Size of the grid WxL
         String[][] grid = new String[N][N];
 
         Random random = new Random(); // creates the new number
-        double infectionRate = 2.0; // infection rate from the patient zero
-        double recoveryRate = 0.2; // recovery rate after being infected
+        double infectionRate = .7; // infection rate from the patient zero
+        double recoveryRate = 0.1; // recovery rate after being infected
 
         for (int i = 0; i < N; i++) { // Starts out with everyone being susceptible with one patient zero
             for (int j = 0; j < N; j++) {
